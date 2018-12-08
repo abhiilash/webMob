@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, ActivityIndicator, AsyncStorage } from 'react-native';
 import { NavigationActions } from 'react-navigation';
 
-export default class Home extends React.Component {
+export default class Registration extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,15 +13,6 @@ export default class Home extends React.Component {
       isLoading: false
     };
     this.onSubmit = this.onSubmit.bind(this)
-  }
-
-  componentWillMount(){
-    AsyncStorage.getItem('@Token', (err, result) => { 
-      var result = result;
-      if (result !== null && result !== '') {
-        this.props.navigation.reset([NavigationActions.navigate({ routeName: 'Users' })]);
-      }
-    });
   }
 
   componentWillReceiveProps(nextProps){
@@ -133,7 +124,7 @@ const styles = StyleSheet.create({
     padding: 20
   },
   input: {
-    height: 40, 
+    height: 50, 
     width: '100%', 
     borderColor: 'gray', 
     borderBottomWidth: 1,
@@ -142,7 +133,7 @@ const styles = StyleSheet.create({
     margin: 5
   },
   errorInput: {
-    height: 40, 
+    height: 50, 
     width: '100%', 
     borderColor: 'red', 
     borderBottomWidth: 1,

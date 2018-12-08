@@ -2,7 +2,7 @@ import React from 'react';
 import { Alert, StyleSheet, Text, View, ActivityIndicator, AsyncStorage, ScrollView, Image, TouchableOpacity } from 'react-native';
 import { NavigationActions } from 'react-navigation';
 
-export default class Home extends React.Component {
+export default class Users extends React.Component {
   //logout button
 
   static navigationOptions({ navigation  }){

@@ -4,23 +4,30 @@ import { TouchableOpacity, Text } from 'react-native';
 import { View } from 'react-native';
 import Registration from '../component/Registration/Container';
 import Users from '../component/Users/Container';
+import Wellcome from '../component/Wellcome/Container';
 
 const AppNavigator = createStackNavigator({
+    Wellcome: { 
+      screen: Wellcome,
+      navigationOptions: {
+        header: null,
+      }
+    },
   	Registration: { 
 	  	screen: Registration,
 	  	navigationOptions: {
-			title: 'Registration',
-		}
+			  title: 'Registration',
+		  }
   	},
   	Users: { 
 	  	screen: Users,
 	  	navigationOptions: {
-			title: 'Users',
-		}
+			  title: 'Users',
+		  }
   	}
 },	
 {
-    initialRouteName: 'Registration',
+    initialRouteName: 'Wellcome',
     navigationOptions: {
     	headerTintColor: '#fff',
 		headerStyle: {
